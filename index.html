@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WDD 131 • Home</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header class="site-header">
+    <h1>WDD 131 Class Work</h1>
+    <p class="subtitle">Quick links to all folders & assignments</p>
+  </header>
+
+  <main class="wrapper">
+    <section class="grid">
+
+      <!-- ===== Week 1 ===== -->
+      <div class="card">
+        <h2>Week 1</h2>
+        <a class="btn" href="week-1/meta.html" target="_blank">Meta Tags Assignment</a>
+      </div>
+
+      <!-- ===== Week 2 ===== -->
+      <div class="card">
+        <h2>Week 2</h2>
+        <a class="btn" href="week-2/layout.html" target="_blank">Layout Assignment</a>
+      </div>
+
+      <!-- ===== Week 3 ===== -->
+      <div class="card">
+        <h2>Week 3</h2>
+        <a class="btn" href="week-3/forms.html" target="_blank">Forms Assignment</a>
+      </div>
+
+      <!-- ===== Week 4 ===== -->
+      <div class="card">
+        <h2>Week 4</h2>
+        <a class="btn" href="week-4/project.html" target="_blank">Project</a>
+      </div>
+
+      <!-- ===== Add more weeks as needed ===== -->
+
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Peter Thacker</p>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
