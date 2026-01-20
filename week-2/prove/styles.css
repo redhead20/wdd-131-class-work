@@ -1,0 +1,129 @@
+/* ===== Reset ===== */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: Georgia, "Times New Roman", serif;
+  background: #f2f2f2;
+  color: #222;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* ===== Theme toggle bar ===== */
+.topbar {
+  display: flex;
+  justify-content: center;
+  gap: 0.6rem;
+  padding: 1rem;
+}
+
+.theme-label {
+  font-weight: 700;
+}
+
+/* ===== Centers the mission card ===== */
+.page {
+  min-height: calc(100vh - 64px);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 2rem 1rem 3rem;
+}
+
+/* ===== Mission card ===== */
+.mission-card {
+  width: min(780px, 100%);
+  background: #efefef;
+  border: 2px solid #cfcfcf;
+  padding: 3.25rem 4rem;
+  text-align: center;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* ===== Title / subtitle ===== */
+.mission-card h1 {
+  font-size: 2.1rem;
+  letter-spacing: 0.15em;
+  font-weight: 700;
+  margin-bottom: 0.9rem;
+}
+
+.mission-card h2 {
+  font-size: 0.85rem;
+  letter-spacing: 0.35em;
+  font-weight: 700;
+  color: #2f6fa3;
+  margin-bottom: 1rem;
+  transition: color 0.3s ease;
+}
+
+.mission-card hr {
+  border: none;
+  border-top: 1px solid #bdbdbd;
+  width: 85%;
+  margin: 0 auto 2rem;
+  transition: border-color 0.3s ease;
+}
+
+/* ===== Text ===== */
+.intro {
+  width: min(520px, 100%);
+  margin: 0 auto 1.6rem;
+  line-height: 1.75;
+  font-size: 1.05rem;
+}
+
+.lead-in {
+  width: min(520px, 100%);
+  margin: 0 auto 1rem;
+  text-align: left;
+  font-size: 1.05rem;
+}
+
+/* ===== List ===== */
+.list {
+  width: min(560px, 100%);
+  margin: 0 auto;
+  text-align: left;
+  line-height: 1.75;
+  font-size: 1.05rem;
+  padding-left: 1.5rem;
+}
+
+.list li {
+  margin: 0.9rem 0;
+}
+
+/* ===== Logo ===== */
+.logo {
+  display: block;
+  margin: 2.5rem auto 0;
+  width: 170px;
+  height: auto;
+}
+
+/* ===== Dark mode styles (activated by JS adding class) ===== */
+body.dark {
+  background: #141414;
+  color: #f1f1f1;
+}
+
+body.dark .mission-card {
+  background: #1f1f1f;
+  border-color: #444;
+}
+
+body.dark .mission-card h2 {
+  color: #8ec5ff;
+}
+
+body.dark .mission-card hr {
+  border-top-color: #555;
+}
+
+/* Small screens */
+@media (max-width: 520px) {
+  .mission-card {
+    padding: 2.25rem 1.5rem;
+  }
+  .mission-card h1 { font-size: 1.6rem; }
+}
