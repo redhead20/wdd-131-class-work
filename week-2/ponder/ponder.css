@@ -1,0 +1,82 @@
+/* ===== Reset ===== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ===== Page ===== */
+body {
+  font-family: Georgia, "Times New Roman", serif;
+  background: #f3f4f6;
+  color: #222;
+}
+
+.page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 3rem 1rem;
+}
+
+/* ===== Card ===== */
+.card {
+  width: min(850px, 100%);
+  background: #e9edf1;
+  border: 2px solid #cfd6dc;
+  padding: 3rem;
+  text-align: center;
+}
+
+/* ===== Headings ===== */
+h1 {
+  font-size: 2.2rem;
+  margin-bottom: 0.75rem;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  margin-bottom: 1.25rem;
+}
+
+hr {
+  width: 60%;
+  margin: 1.5rem auto;
+  border: none;
+  border-top: 2px solid #2f6fa3;
+}
+
+/* ===== Logos ===== */
+.logos {
+  display: block;
+  margin: 1.5rem auto;
+  max-width: 360px;
+}
+
+/* ===== Content Sections ===== */
+section h2 {
+  margin-top: 1.5rem;
+  font-size: 1.35rem;
+}
+
+section p {
+  max-width: 520px;
+  margin: 0.5rem auto 1rem;
+  line-height: 1.6;
+}
+
+/* ===== Dropdown ===== */
+.dropdown {
+  margin-top: 2rem;
+}
+
+label {
+  font-weight: bold;
+  margin-right: 0.5rem;
+}
+
+select {
+  padding: 0.4rem;
+  font-size: 1rem;
+}
