@@ -1,0 +1,97 @@
+/* ===== Reset ===== */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+/* ===== Page background ===== */
+body {
+  font-family: Georgia, "Times New Roman", serif;
+  background: #f2f2f2;
+  color: #222;
+}
+
+/* centers the card on the page */
+.page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 3rem 1rem;
+}
+
+/* ===== The “paper” box ===== */
+.mission-card {
+  width: min(780px, 100%);
+  background: #efefef;
+  border: 2px solid #cfcfcf;
+  padding: 3.25rem 4rem;
+  text-align: center;
+}
+
+/* ===== Title / subtitle ===== */
+.mission-card h1 {
+  font-size: 2.1rem;
+  letter-spacing: 0.15em;
+  font-weight: 700;
+  margin-bottom: 0.9rem;
+}
+
+.mission-card h2 {
+  font-size: 0.85rem;
+  letter-spacing: 0.35em;
+  font-weight: 700;
+  color: #2f6fa3;
+  margin-bottom: 1rem;
+}
+
+/* thin line under subtitle */
+.mission-card hr {
+  border: none;
+  border-top: 1px solid #bdbdbd;
+  width: 85%;
+  margin: 0 auto 2rem;
+}
+
+/* ===== Body text ===== */
+.intro {
+  width: min(520px, 100%);
+  margin: 0 auto 1.6rem;
+  line-height: 1.75;
+  font-size: 1.05rem;
+}
+
+/* italic line */
+.lead-in {
+  width: min(520px, 100%);
+  margin: 0 auto 1rem;
+  text-align: left;
+  font-size: 1.05rem;
+}
+
+/* ===== Numbered list ===== */
+.list {
+  width: min(560px, 100%);
+  margin: 0 auto;
+  text-align: left;
+  line-height: 1.75;
+  font-size: 1.05rem;
+  padding-left: 1.5rem; /* indent numbers */
+}
+
+.list li {
+  margin: 0.9rem 0;
+}
+
+/* ===== Logo ===== */
+.logo {
+  display: block;
+  margin: 2.5rem auto 0;
+  width: 170px;
+  height: auto;
+}
+
+/* ===== Small screen tweak ===== */
+@media (max-width: 520px) {
+  .mission-card {
+    padding: 2.25rem 1.5rem;
+  }
+  .mission-card h1 { font-size: 1.6rem; }
+}
