@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, sans-serif;
+  background: #d9d9d9;
+  color: #111;
+}
+
+/* ===== HEADER (mobile-first) ===== */
+.site-header {
+  background: #2f74d0;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+.site-header h1 {
+  margin: 0;
+  font-size: 1.6rem;
+}
+
+/* Menu button shown on mobile/tablet */
+.menu-btn {
+  margin-top: 0.5rem;
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+/* Part 1 requirement: nav links hidden on mobile */
+.site-nav a {
+  display: none;
+}
+
+/* ===== MAIN ===== */
+.content {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 1rem;
+  text-align: center;
+}
+
+.content h2 {
+  margin: 0.75rem 0 1rem;
+  font-weight: 400;
+}
+
+/* ===== GALLERY ===== */
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr; /* Mobile: 1 column */
+  gap: 1.25rem;
+  justify-items: center;
+}
+
+.card {
+  margin: 0;
+  width: 220px;              /* keeps cards consistent like the screenshot */
+  border: 1px solid #888;
+  background: #efefef;
+  padding: 0.6rem;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+}
+
+/* Required: square images with correct aspect ratio */
+.card img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  display: block;
+  border: 1px solid #bbb;
+}
+
+/* ===== FOOTER ===== */
+.site-footer {
+  background: #2f74d0;
+  color: white;
+  text-align: center;
+  padding: 0.75rem;
+  margin-top: 1rem;
+}
+
+/* ===== TABLET ===== */
+@media screen and (min-width: 600px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr); /* Tablet: 2 columns */
+  }
+}
+
+/* ===== DESKTOP ===== */
+@media screen and (min-width: 1000px) {
+  /* Desktop: show nav links, hide menu button */
+  .menu-btn {
+    display: none;
+  }
+
+  .site-nav {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 0.5rem;
+  }
+
+  .site-nav a {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    font-size: 0.95rem;
+  }
+
+  .site-nav a:hover {
+    text-decoration: underline;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(3, 1fr); /* Desktop: 3 columns */
+  }
+}
