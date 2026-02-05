@@ -1,0 +1,7 @@
+const menuBtn = document.getElementById("menuBtn");
+const nav = document.getElementById("mainNav");
+
+menuBtn.addEventListener("click", () => {
+  nav.classList.toggle("hide");
+  menuBtn.classList.toggle("change");
+});
