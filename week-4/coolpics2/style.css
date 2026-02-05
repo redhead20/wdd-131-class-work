@@ -1,0 +1,176 @@
+/* Base */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Header */
+.site-header {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.title {
+  margin: 0;
+}
+
+/* Menu button */
+.menu-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.menu-btn span {
+  display: block;
+  width: 30px;
+  height: 4px;
+  margin: 6px 0;
+  background: black;
+  transition: 0.4s;
+}
+
+/* Hamburger -> X animation */
+.change .bar1 { transform: translate(0, 10px) rotate(-45deg); }
+.change .bar2 { opacity: 0; }
+.change .bar3 { transform: translate(0, -10px) rotate(45deg); }
+
+/* Nav (mobile first) */
+nav {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+nav a {
+  padding: 1rem;
+  text-decoration: none;
+  color: black;
+}
+
+nav a:hover {
+  color: #555;
+}
+
+.hide {
+  display: none;
+}
+
+/* Gallery */
+main {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 1rem 2rem;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+figure {
+  margin: 0;
+}
+
+.gallery img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+  padding: 5px;
+  background: white;
+  box-shadow: 5px 5px 15px rgba(0,0,0,0.7);
+  cursor: pointer;
+}
+
+/* Modal */
+dialog {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  border: none;
+  margin: 0;
+  background: rgba(0,0,0,0.75);
+  position: fixed;
+  inset: 0;
+}
+
+dialog::backdrop {
+  background: rgba(0,0,0,0.75);
+}
+
+.viewer img {
+  width: 90%;
+  display: block;
+  margin: 20vh auto;
+  background: white;
+}
+
+.close-viewer {
+  position: absolute;
+  top: 10vh;
+  right: 2vh;
+  font-size: 1.5em;
+  padding: 3px 8px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Footer */
+.site-footer {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 1rem;
+  text-align: center;
+}
+
+/* Desktop */
+@media (min-width: 700px) {
+  .menu-btn {
+    display: none;
+  }
+
+  nav {
+    display: flex !important;
+    width: auto;
+    flex-direction: row;
+    margin-top: 0;
+  }
+
+  nav a {
+    padding: 0.5rem 1rem;
+  }
+
+  .gallery {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 1000px) {
+  .gallery {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .viewer img {
+    width: 60%;
+    margin: 15vh auto;
+    max-width: 800px;
+  }
+
+  .close-viewer {
+    right: 15vh;
+  }
+}
+
+.content {
+    text-align: center;
+}

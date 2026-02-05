@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Cool Pics - Responsive Menu and Media Queries" />
+  <title>Cool Pics 2 📷</title>
+
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <header class="site-header">
+    <h1>Cool Pics 2 📷</h1>
+
+    <!-- Mobile menu button -->
+    <button class="menu-btn" id="menuBtn" type="button" aria-label="Menu" aria-expanded="false">
+      Menu
+    </button>
+
+    <!-- Start hidden on mobile (like the video) -->
+    <nav class="site-nav hide" id="siteNav" aria-label="Primary navigation">
+      <a href="#">Home</a>
+      <a href="#">People</a>
+      <a href="#">Places</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <main class="content">
+    <h2>Current Work</h2>
+
+    <section class="gallery" id="gallery">
+      <!-- Replace src filenames to match YOUR images -->
+      <!-- IMPORTANT: set data-full to the HIGH RES Norris image you downloaded -->
+      <figure class="card">
+        <img src="images/norris-sm.jpg" data-full="images/norris-lg.jpg" alt="Photo 1" />
+      </figure>
+
+      <figure class="card"><img src="images/norris-sm.jpg" alt="Photo 2" /></figure>
+      <figure class="card"><img src="images/norris-sm.jpg" alt="Photo 3" /></figure>
+      <figure class="card"><img src="images/norris-sm.jpg" alt="Photo 4" /></figure>
+      <figure class="card"><img src="images/norris-sm.jpg" alt="Photo 5" /></figure>
+      <figure class="card"><img src="images/norris-sm.jpg" alt="Photo 6" /></figure>
+      <figure class="card"><img src="images/norris-sm.jpg" alt="Photo 7" /></figure>
+      <figure class="card"><img src="images/norris-sm.jpg" alt="Photo 8" /></figure>
+      <figure class="card"><img src="images/norris-sm.jpg" alt="Photo 9" /></figure>
+    </section>
+  </main>
+
+  <!-- Modal viewer (required for Part 2) -->
+  <dialog class="viewer" id="viewer" aria-label="Image viewer">
+    <button class="close-viewer" id="closeViewer" type="button" aria-label="Close viewer">X</button>
+    <img id="viewerImg" src="" alt="">
+  </dialog>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Cool Pics</p>
+  </footer>
+</body>
+</html>
