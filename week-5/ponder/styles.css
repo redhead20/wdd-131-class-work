@@ -1,13 +1,14 @@
+* { box-sizing: border-box; }
+
 body {
   font-family: Arial, sans-serif;
   margin: 0;
-  padding: 0;
   line-height: 1.6;
 }
 
 /* Header & Footer */
 header, footer {
-  background-color: #222;
+  background: #222;
   color: white;
   padding: 1rem;
   text-align: center;
@@ -52,7 +53,7 @@ header, footer {
   top: 12px;
 }
 
-/* Movie section */
+/* Movie layout */
 #movie-list {
   padding: 0 2rem;
 }
@@ -69,18 +70,18 @@ header, footer {
   color: #b30059;
   font-size: 1.5rem;
   text-align: center;
-  margin: 20px;
-}
-
-.movie p {
-  padding-left: 20px;
+  margin: 20px 0;
 }
 
 .movie img {
   max-width: 100%;
   display: block;
   border-radius: 8px;
-  margin: 0 auto;
+  margin: 0 auto 12px;
+}
+
+.stars {
+  letter-spacing: 1px;
 }
 
 .desc {
@@ -89,8 +90,6 @@ header, footer {
 
 /* Tablet and up */
 @media (min-width: 600px) {
-
-  /* Horizontal nav */
   .main-nav {
     display: flex;
     justify-content: center;
@@ -101,7 +100,6 @@ header, footer {
     padding: 0;
   }
 
-  /* Movie grid layout */
   .movie {
     display: grid;
     grid-template-columns: 1fr 1.2fr;
@@ -122,12 +120,10 @@ header, footer {
 
   .movie p:not(.desc) {
     grid-column: 2;
-    padding-left: 0;
     margin: 0;
   }
 
   .desc {
     grid-column: 1 / -1;
-    padding-left: 0;
   }
 }
