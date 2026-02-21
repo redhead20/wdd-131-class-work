@@ -86,7 +86,7 @@ header, footer {
   grid-area: info;
   display: flex;
   flex-direction: column;
-  gap: 30px;            /* ✅ spaces out the lines */
+  gap: 30px;
 }
 
 .movie__title {
