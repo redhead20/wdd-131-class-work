@@ -1,0 +1,249 @@
+/* styles.css */
+
+* { box-sizing: border-box; }
+
+:root{
+  --card: #d3d3d3;
+  --shadow: 0 10px 18px rgba(0,0,0,.35);
+  --border: #8a8a8a;
+}
+
+body{
+  margin: 0;
+  font-family: Georgia, serif;
+  background: #fff;
+  text-align: center;
+  padding: 28px 0 40px;
+}
+
+h1{
+  margin: 0 0 10px;
+  font-size: 2.2rem;
+  font-weight: 600;
+}
+
+/* form container */
+form{
+  width: min(760px, 95vw);
+  margin: 0 auto;
+}
+
+/* stacked cards area */
+.card-grid{
+  position: relative;
+  width: min(720px, 95vw);
+  height: 360px;
+  margin: 18px auto 0;
+}
+
+/* ---------- FRONT CARD ---------- */
+.card-front{
+  position: absolute;
+  top: 10px;
+  left: 10px;
+
+  width: 560px;
+  max-width: 95vw;
+  height: 360px;
+
+  background: var(--card);
+  border-radius: 12px;
+  padding: 28px 32px;
+
+  box-shadow: var(--shadow);
+  text-align: left;
+
+  display: grid;
+  grid-template-columns: 1fr 180px;
+  grid-template-rows: auto auto auto auto;
+  column-gap: 26px;
+  row-gap: 12px;
+
+  z-index: 3;
+}
+
+/* TOTAL + icon row */
+.total{
+  grid-column: 1;
+  grid-row: 1;
+  font-size: 1.7rem;
+  font-weight: 700;
+}
+
+.card-icon{
+  grid-column: 2;
+  grid-row: 1;
+  justify-self: end;
+  align-self: start;
+  font-size: 0; /* hide emoji size if you're using an image icon */
+}
+
+/* if you're using emoji 💳 instead of an image, comment the font-size:0 above and use this: */
+/* .card-icon { font-size: 1.8rem; } */
+
+.card-front label{
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin: 0 0 6px;
+}
+
+.card-front input{
+  width: 100%;
+  padding: 14px 14px;
+  border-radius: 4px;
+  border: 2px solid var(--border);
+  font-size: 1.4rem;
+}
+
+.card-front input::placeholder{
+  color: #7a7a7a;
+  font-weight: 600;
+}
+
+/* Card number spans full width */
+label[for="cardNumber"]{
+  grid-column: 1 / -1;
+  grid-row: 2;
+}
+#cardNumber{
+  grid-column: 1 / -1;
+  grid-row: 3;
+}
+
+/* Card holder on left */
+label[for="cardHolder"]{
+  grid-column: 1;
+  grid-row: 4;
+}
+#cardHolder{
+  grid-column: 1;
+  grid-row: 5;
+}
+
+/* Expiration on right */
+#cardExpiration{
+  grid-column: 2;
+  grid-row: 4 / 6;
+  align-self: end;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 10px;
+}
+
+#cardExpiration label{
+  grid-column: 1 / -1;
+  margin-bottom: 6px;
+}
+
+#month, #year{
+  width: 100%;
+}
+
+/* ---------- BACK CARD ---------- */
+.card-back{
+  position: absolute;
+  top: 110px;
+  left: 210px;
+
+  width: 560px;
+  max-width: 95vw;
+  height: 260px;
+
+  background: var(--card);
+  border-radius: 12px;
+  padding: 24px 28px;
+
+  box-shadow: var(--shadow);
+  text-align: left;
+
+  z-index: 1; /* behind the front card */
+}
+
+/* stripe */
+.stripe{
+  height: 52px;
+  background: #000;
+  margin: 0 0 26px;
+  border-radius: 2px;
+}
+
+/* CVV moved to the right and brought forward so it can be typed */
+.card-back label,
+.card-back input{
+  position: absolute;
+  right: 34px;
+  z-index: 5;           /* ✅ above front card for clicking/typing */
+}
+
+.card-back label{
+  top: 110px;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.card-back input{
+  top: 150px;
+  width: 140px;
+  padding: 14px 14px;
+  border-radius: 4px;
+  border: 2px solid var(--border);
+  font-size: 1.4rem;
+}
+
+.card-back input::placeholder{
+  color: #7a7a7a;
+  font-weight: 600;
+}
+
+/* ---------- Submit button ---------- */
+button{
+  margin-top: 18px;
+  padding: 16px 44px;
+  font-size: 1.6rem;
+  border-radius: 14px;
+  border: 3px solid #000;
+  background: #f3f3f3;
+  cursor: pointer;
+  box-shadow: 6px 6px 12px rgba(0,0,0,.35);
+}
+
+button:active{
+  transform: translateY(1px);
+}
+
+.message{
+  margin-top: 14px;
+  font-weight: 700;
+  white-space: pre-line;
+}
+
+/* ---------- Responsive tweaks ---------- */
+@media (max-width: 740px){
+  .card-grid{
+    height: 420px;
+  }
+
+  .card-front{
+    width: 92vw;
+    left: 4vw;
+  }
+
+  .card-back{
+    width: 92vw;
+    left: 8vw;
+    top: 140px;
+  }
+
+  .card-front{
+    grid-template-columns: 1fr 150px;
+  }
+
+  .card-front label{ font-size: 1.35rem; }
+  .card-front input{ font-size: 1.2rem; }
+
+  .card-back label{ font-size: 1.35rem; }
+  .card-back input{ font-size: 1.2rem; }
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Credit Card Form</title>
+
+<link rel="icon" href="images/favicon.ico">
+<link rel="stylesheet" href="styles.css">
+<script src="script.js" defer></script>
+
+</head>
+<body>
+
+<h1>Credit Card Form</h1>
+
+<form id="cardForm">
+
+<div class="card-grid">
+
+<!-- FRONT CARD -->
+<div class="card-front">
+
+<div class="total">TOTAL: $199</div>
+
+<div class="card-icon">💳</div>
+
+<label for="cardNumber">CARD NUMBER</label>
+<input id="cardNumber" type="text" placeholder="1234 5678 9101 1020">
+
+<label for="cardHolder">CARD HOLDER</label>
+<input id="cardHolder" type="text" placeholder="John Doe">
+
+<div id="cardExpiration">
+<label id="expirationDate" for="month">EXPIRATION</label>
+
+<input
+type="text"
+id="month"
+placeholder="MM"
+aria-labelledby="expirationDate">
+
+<input
+type="text"
+id="year"
+placeholder="YY"
+aria-labelledby="expirationDate">
+
+</div>
+
+</div>
+
+
+<!-- BACK CARD -->
+<div class="card-back">
+
+<div class="stripe"></div>
+
+<label for="cvc">CVC/CVV</label>
+<input id="cvc" type="text" placeholder="xxx">
+
+</div>
+
+</div>
+
+<button type="submit">Submit</button>
+
+<div class="message"></div>
+
+</form>
+
+</body>
+</html>
