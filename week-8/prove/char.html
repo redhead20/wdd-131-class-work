@@ -1,0 +1,63 @@
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Character Card | WDD 131</title>
+
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+
+    <body>
+        <header class="site-header">
+            <h1>Character Card</h1>
+        </header>
+
+        <main class="wrapper">
+            <section class="card" aria-labelledby="characterName">
+                <div class="card__media">
+                    <div class="image-container">
+                        <img id="characterImage" src="images/ender.jpg" alt="Emberfang Sentinel" loading="lazy" />
+                        <div id="deadBanner" class="dead-banner" aria-hidden="true">DEAD</div>
+                    </div>
+                </div>
+                <div class="card__content">
+                    <h2 id="characterName">Emberfang Sentinel</h2>
+
+                    <dl class="stats" aria-label="Character stats">
+                        <div class="stat">
+                            <dt>Class</dt>
+                            <dd id="characterClass">Fire Guardian</dd>
+                        </div>
+
+                        <div class="stat">
+                            <dt>Level</dt>
+                            <dd id="characterLevel">1</dd>
+                        </div>
+
+                        <div class="stat">
+                            <dt>Health</dt>
+                            <dd id="characterHealth">100</dd>
+                        </div>
+                    </dl>
+
+                    <p id="statusMessage" class="status" role="status" aria-live="polite"></p>
+
+                    <div class="buttons">
+                        <button id="attackBtn" type="button">Attacked (-20)</button>
+                        <button id="levelUpBtn" type="button">Level Up (+1)</button>
+                        <button id="resetBtn" type="button" class="btn-secondary">Reset</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <p>&copy; <span id="year"></span> WDD 131 • Character Card</p>
+        </footer>
+
+        <script src="script.js" defer></script>
+    </body>
+
+    </html>
