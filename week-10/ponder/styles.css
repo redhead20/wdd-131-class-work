@@ -1,0 +1,20 @@
+body {
+    font-family: Arial;
+    text-align: center;
+    background: #f4f4f4;
+}
+
+input {
+    padding: 10px;
+    width: 250px;
+    margin: 20px;
+}
+
+.hike {
+    background: white;
+    margin: 15px auto;
+    padding: 15px;
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, .2);
+}
