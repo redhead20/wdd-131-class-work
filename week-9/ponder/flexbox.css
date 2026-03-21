@@ -1,0 +1,33 @@
+/* HEADER LAYOUT */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* NAVIGATION */
+.main-nav {
+  display: flex;
+  gap: 1rem;
+  padding: 0;
+}
+
+/* MEDIA CARD (top example) */
+.media-card {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+/* GALLERY LAYOUT */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+/* EACH CARD IN GALLERY */
+.gallery .media-card {
+  flex: 1 1 300px;
+  flex-direction: column;
+}
