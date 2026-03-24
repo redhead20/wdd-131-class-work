@@ -1,4 +1,5 @@
-// ===== RECIPES DATA (paste your array here) =====
+// ===== RECIPES DATA =====
+
 const recipes = [
 	{
 		author: 'Provo High Culinary Students',
@@ -282,8 +283,7 @@ const recipes = [
 ]            
 
 
-
-// ===== DISPLAY ONE RECIPE =====
+// ===== DISPLAY RECIPES =====
 function displayRecipes(recipeList) {
   const container = document.getElementById("recipesContainer");
   container.innerHTML = "";
@@ -309,7 +309,7 @@ function displayRecipes(recipeList) {
 }
 
 
-// ===== GENERATE STAR RATING =====
+// ===== STAR RATING =====
 function generateStars(rating) {
   let stars = "";
   const fullStars = Math.floor(rating);
@@ -333,11 +333,11 @@ function showRandomRecipe() {
 }
 
 
-// ===== FILTER RECIPES =====
+// ===== FILTER =====
 function filterRecipes(searchTerm) {
-  return recipes.filter(recipe => {
-    const term = searchTerm.toLowerCase();
+  const term = searchTerm.toLowerCase();
 
+  return recipes.filter(recipe => {
     return (
       recipe.name.toLowerCase().includes(term) ||
       recipe.description.toLowerCase().includes(term) ||
@@ -347,7 +347,7 @@ function filterRecipes(searchTerm) {
 }
 
 
-// ===== SORT RECIPES =====
+// ===== SORT =====
 function sortRecipes(recipeList) {
   return recipeList.sort((a, b) => {
     return a.name.localeCompare(b.name);
@@ -355,7 +355,7 @@ function sortRecipes(recipeList) {
 }
 
 
-// ===== SEARCH FUNCTION =====
+// ===== SEARCH =====
 function searchRecipes() {
   const input = document.getElementById("searchInput").value;
 
@@ -376,5 +376,5 @@ document.getElementById("searchInput").addEventListener("keypress", function(e) 
 });
 
 
-// ===== LOAD PAGE =====
+// ===== INITIAL LOAD =====
 showRandomRecipe();
